@@ -1,21 +1,17 @@
-import cv2
+import car
+import Pedestrian
 
-trained_face_data = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
+running = True
+print("Welcome to the Program...")
+print("What do you want to perform:-")
+while running:
+    print("1. Detect cars\n2. Detect pedestrians\n")
+    choice = input("What to perform [1/2]:").strip()
+    if choice == "1":
+        car.run()
+    elif choice == "2":
+        Pedestrian.run()
+    else:
+        print("Invalid input... ;-;")
 
-img = cv2.imread("../data/modi.png")
-
-
-while True:
-    # succesful_frame_read, frame = webcam.read()  # bool , frame
-
-    gray_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-
-    face_coordinates = trained_face_data.detectMultiScale(gray_img)
-
-    for (x, y, w, h) in face_coordinates:
-        cv2.rectangle(img, (x, y), (x + w, y + h), (0, 255, 0), 5)
-
-    # print(face_coordinates)
-
-    cv2.imshow('Lets see', img)
-    cv2.waitKey(1)
+    print("That's all from our side\nThank you for choosing us")
