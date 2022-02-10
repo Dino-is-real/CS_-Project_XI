@@ -1,6 +1,6 @@
 import cv2
 
-trained_face_data = cv2.CascadeClassifier('haarcascade_car.xml')
+trained_face_data = cv2.CascadeClassifier('../haarcascade/haarcascade_car.xml')
 
 cap= cv2.VideoCapture("../data/dataset_video1.avi")
 
