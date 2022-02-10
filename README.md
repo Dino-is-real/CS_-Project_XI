@@ -9,9 +9,23 @@ Simulates the inner working of the AI in a Tesla.
 2) Mac OS (Tested on MacOS Monterey)
 3) GNU/Linux (Tested on Arch Linux x86_64)
 
-Should work with most of the POSIX compatible systems which have a python3 interpreter present. 
+Should work with most of the POSIX systems which have a python3 interpreter present. 
 
 Python3.10 is used for testing.
+
+## Installation
+
+For POSIX:
+
+`git clone https://github.com/Dino-is-real/driveless`
+
+`cd driveless/src`
+
+`python3 main.py`
+
+For Windows:
+
+Clone The Repo and go in the `src` folder and run main.py
 
 ## Devs
 
